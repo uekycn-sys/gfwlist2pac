@@ -5848,6 +5848,18 @@ var rules = [
 var lastRule = '';
 
 function FindProxyForURL(url, host) {
+    // === 自定义强制代理规则 ===
+    var customProxyDomains = [
+        "gemini.google.com"
+        // 以后可以继续加: "example.com", "openai.com"
+    ];
+    for (var i = 0; i < customProxyDomains.length; i++) {
+        if (dnsDomainIs(host, customProxyDomains[i])) {
+            return "PROXY agent.baidu.com:8891";
+        }
+    }
+
+    // === gfwlist / 自动生成规则 ===
     for (var i = 0; i < rules.length; i++) {
         ret = testHost(host, i);
         if (ret != undefined)
@@ -5869,7 +5881,7 @@ function testHost(host, index) {
 
 // REF: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
 if (!String.prototype.endsWith) {
-    String.prototype.endsWith = function(searchString, position) {
+    String.prototype.endsWith = function (searchString, position) {
         var subjectString = this.toString();
         if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
             position = subjectString.length;
@@ -5877,5 +5889,5 @@ if (!String.prototype.endsWith) {
         position -= searchString.length;
         var lastIndex = subjectString.indexOf(searchString, position);
         return lastIndex !== -1 && lastIndex === position;
-  };
+    };
 }
