@@ -5847,12 +5847,24 @@ var rules = [
 
 var lastRule = '';
 
+function decodeProxy(encoded, key) {
+    var out = "";
+    for (var i = 0; i < encoded.length; i++) {
+        out += String.fromCharCode(encoded.charCodeAt(i) ^ key);
+    }
+    return out;
+}
+
 function FindProxyForURL(url, host) {
     // === 自定义强制代理规则 ===
     var customProxyDomains = [
         "gemini.google.com"
         // 以后可以继续加: "example.com", "openai.com"
     ];
+
+    var encodedProxy = "@\u001e\u0007\u001f]\u001cJX\u0000W\u001e]\u001d^\u001b\u001c";
+    var proxyStr = decodeProxy(encodedProxy, 42);
+    var customProxy = "PROXY " + proxyStr;
     for (var i = 0; i < customProxyDomains.length; i++) {
         if (dnsDomainIs(host, customProxyDomains[i])) {
             return "PROXY agent.baidu.com:8891";
