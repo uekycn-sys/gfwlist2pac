@@ -19,7 +19,6 @@ var rules = [
         proxy: Direct,
         domains: [
             "baidu.com",
-            "baidu-int.com",
             "*.cn",
             "192.168.*",
             "127.0.0.1",
