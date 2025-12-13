@@ -32,7 +32,8 @@ var rules = [
         domains: [
             "google.com",
             "twitter.com",
-            "youtube.com"
+            "youtube.com",
+            "chatgpt.com"
         ]
     }
 ];
@@ -60,7 +61,7 @@ function FindProxyForURL(url, host) {
         }
     }
 
-    return MainProxy;
+    return Direct;
 }
 
 if (!String.prototype.endsWith) {
