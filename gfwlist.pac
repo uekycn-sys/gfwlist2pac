@@ -28,6 +28,7 @@ var rules = [
     {
         proxy: MainProxy,
         domains: [
+            "*.hk",
             "google.com",
             "twitter.com",
             "youtube.com",
