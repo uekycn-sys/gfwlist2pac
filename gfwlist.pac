@@ -32,10 +32,11 @@ var rules = [
             "googlevideo.com",
             "ggpht.com",
             "github.com",
-            "*.hk",
             "google.com",
             "youtube.com",
             "youtubekids.com",
+            "gmail.com",
+            "*.hk",
             "chatgpt.com",
             "openai.com"
         ]
