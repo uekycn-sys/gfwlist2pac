@@ -9,8 +9,6 @@ var rules = [
     {
         proxy: AgentProxy,
         domains: [
-            "gemini.google.com",
-            "aistudio.google.com"
         ]
     },
     {
@@ -28,6 +26,8 @@ var rules = [
     {
         proxy: MainProxy,
         domains: [
+            "gemini.google.com",
+            "aistudio.google.com",
             "ytimg.com",
             "googlevideo.com",
             "ggpht.com",
