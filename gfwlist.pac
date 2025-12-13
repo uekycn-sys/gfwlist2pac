@@ -10,9 +10,7 @@ var rules = [
         proxy: AgentProxy,
         domains: [
             "gemini.google.com",
-            "aistudio.google.com",
-            "alkalimakersuite-pa.clients6.google.com",
-            "generativelanguage.googleapis.com"
+            "aistudio.google.com"
         ]
     },
     {
