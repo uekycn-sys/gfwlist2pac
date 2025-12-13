@@ -28,6 +28,7 @@ var rules = [
     {
         proxy: MainProxy,
         domains: [
+            "ytimg.com",
             "googlevideo.com",
             "ggpht.com",
             "github.com",
