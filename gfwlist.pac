@@ -29,6 +29,7 @@ var rules = [
         proxy: MainProxy,
         domains: [
             "googlevideo.com",
+            "ggpht.com",
             "github.com",
             "*.hk",
             "google.com",
