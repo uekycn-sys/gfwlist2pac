@@ -34,8 +34,8 @@ var rules = [
             "github.com",
             "*.hk",
             "google.com",
-            "twitter.com",
             "youtube.com",
+            "youtubekids.com",
             "chatgpt.com",
             "openai.com"
         ]
