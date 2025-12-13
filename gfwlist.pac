@@ -33,6 +33,7 @@ var rules = [
             "ggpht.com",
             "github.com",
             "google.com",
+            "googleusercontent.com",
             "youtube.com",
             "youtubekids.com",
             "gmail.com",
