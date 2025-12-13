@@ -31,7 +31,8 @@ var rules = [
             "google.com",
             "twitter.com",
             "youtube.com",
-            "chatgpt.com"
+            "chatgpt.com",
+            "openai.com"
         ]
     }
 ];
